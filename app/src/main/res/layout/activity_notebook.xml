@@ -1,0 +1,86 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sabrina.samplenotebook.NotebookActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/purple"
+            android:orientation="horizontal" >
+
+            <TextView android:text="@string/welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/white"
+                android:id="@+id/WelText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/white"
+                android:text="@string/Empty"
+                android:id="@+id/User" />
+
+
+        </LinearLayout>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:id="@+id/main_listView_notes" />
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="@dimen/button_margin_right"
+        android:layout_marginBottom="180dp"
+        android:src="@drawable/ic_action_addnote"
+        android:elevation="6dp"
+        android:id="@+id/button_addnote"
+        app:pressedTranslationZ="12dp"
+        app:backgroundTint="@color/purple"
+        android:visibility="invisible"
+        android:onClick="onNoteClick" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="@dimen/button_margin_right"
+        android:layout_marginBottom="100dp"
+        android:src="@drawable/ic_action_logout"
+        android:elevation="6dp"
+        android:id="@+id/button_logout"
+        app:pressedTranslationZ="12dp"
+        app:backgroundTint="@color/purple"
+        android:visibility="invisible"
+        android:onClick="onLogoutClick" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="@dimen/button_margin_right"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_action_plus"
+        app:backgroundTint="@color/purple"
+        android:elevation="6dp"
+        android:id="@+id/button_plus"
+        app:pressedTranslationZ="12dp"/>
+
+</android.support.design.widget.CoordinatorLayout>

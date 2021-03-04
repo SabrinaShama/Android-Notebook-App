@@ -1,0 +1,102 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sabrina.samplenotebook.WritingActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/note_et_title"
+                android:layout_marginTop="10dp"
+                android:hint="Title"
+                android:singleLine="true"
+                android:backgroundTint="@android:color/black"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView"
+                android:padding="10dp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/note_et_content"
+                android:hint="Write here..."
+                android:layout_below="@+id/imageView"
+                android:gravity="top"
+                android:backgroundTint="@android:color/black" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="@dimen/button_margin_right"
+        android:layout_marginBottom="260dp"
+        android:src="@drawable/ic_action_addimage"
+        android:elevation="6dp"
+        android:id="@+id/button_addimage"
+        app:pressedTranslationZ="12dp"
+        app:backgroundTint="@color/purple"
+        android:visibility="invisible"
+        android:onClick="onAddImageClick"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="@dimen/button_margin_right"
+        android:layout_marginBottom="180dp"
+        android:src="@drawable/ic_action_save"
+        android:elevation="6dp"
+        android:id="@+id/button_save"
+        app:pressedTranslationZ="12dp"
+        app:backgroundTint="@color/purple"
+        android:visibility="invisible"
+        android:onClick="onSaveClick"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="@dimen/button_margin_right"
+        android:layout_marginBottom="100dp"
+        android:src="@drawable/ic_action_delete"
+        android:elevation="6dp"
+        android:id="@+id/button_delete"
+        app:pressedTranslationZ="12dp"
+        app:backgroundTint="@color/purple"
+        android:visibility="invisible"
+        android:onClick="onDeleteClick"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="@dimen/button_margin_right"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_action_plus"
+        app:backgroundTint="@color/purple"
+        android:elevation="6dp"
+        android:id="@+id/button_plus"
+        app:pressedTranslationZ="12dp"/>
+
+</android.support.design.widget.CoordinatorLayout>
